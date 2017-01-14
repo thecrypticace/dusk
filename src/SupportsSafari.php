@@ -20,7 +20,7 @@ trait SupportsSafari
     public static function startSafariDriver()
     {
         if (! file_exists('/usr/bin/safaridriver')) {
-            throw new RuntimeException('You must be on at least macOS Sierra to use the Safari Driver');
+            throw new RuntimeException('You must have at least Safari 10 installed to use the Safari Driver');
         }
 
         static::$safariProcess = new Process('/usr/bin/safaridriver --port=9515', realpath(__DIR__.'/../bin'), null, null, null);
