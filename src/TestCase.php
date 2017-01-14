@@ -14,6 +14,7 @@ use Illuminate\Foundation\Testing\TestCase as FoundationTestCase;
 abstract class TestCase extends FoundationTestCase
 {
     use SupportsChrome;
+    use SupportsSafari;
 
     /**
      * All of the active browser instances.
